@@ -165,7 +165,7 @@ li:not(:last-child) {
 }
 
 .visually-hidden {
-  position: relative; /*Заменил absolute для автотестов*/
+  position: absolute; /*Заменил absolute для автотестов*/
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
