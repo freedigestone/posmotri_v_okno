@@ -165,7 +165,7 @@ li:not(:last-child) {
 }
 
 .visually-hidden {
-  position: absolute; /*Заменил absolute для автотестов*/
+  position: absolute;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
@@ -241,7 +241,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
   content: '';
-  position: relative; /*Заменил absolute для автотестов*/
+  position: absolute;
   width: 13px; 
   height: 13px;
   background-color: #fff; 
