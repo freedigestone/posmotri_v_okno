@@ -91,6 +91,7 @@ h2 {
 
 .result {
   width: 711px;
+  padding-top: 78px;
 }
 
 video {
@@ -107,7 +108,7 @@ video {
   flex-direction: row;
   align-items: flex-end;
   gap: 30px;
-  padding: 42px 30px 30px; /* При padding: 30px идет расхождение с макетом, автотесты не проходят изза различия в макете*/
+  padding: 30px; 
 }
 
 .search-form {
