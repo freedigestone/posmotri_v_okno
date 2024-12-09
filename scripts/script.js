@@ -145,7 +145,7 @@ function appendCards({ baseUrl, dataArray, cardTmp, container }) {
   dataArray.forEach((el) => {
     const node = cardTmp.content.cloneNode(true);
     node.querySelector('a').setAttribute('id', el.id);
-    node.querySelector('.content__video-card-title').textContent = el.city;
+    node.querySelector('.content__video-card-title').textContent = el.city ;
     node.querySelector('.content__video-card-description').textContent =
       el.description;
     node
