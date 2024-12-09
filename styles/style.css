@@ -55,6 +55,7 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  padding-top:2px;
 }
 
 .content__video-card-description {
@@ -73,7 +74,7 @@ h2 {
 }
 
 .page {
-  min-height: 100%;
+  min-height: 800px;
   inline-size: 1200px;
   margin: 0 auto;
   color: #fff;
@@ -105,21 +106,21 @@ video {
   flex-direction: row;
   align-items: flex-end;
   gap: 30px;
-  padding: 19.5vh 30px; /*Верхний и нижний padding по макету 133px, сдлал в относительных единицах в зависимости от экрана*/
+  padding: 42px 30px 30px ; /* При padding: 30px идет расхождение с макетом*/
 }
 
 .search-form {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 38px;
   align-items: flex-end;
 }
 
 .search-form__fieldset-title {
   line-height: 22px;
   color: #fff;
-  padding-bottom: 5px;
+   margin-bottom: 3px;
 }
 
 .content__list {
@@ -134,7 +135,7 @@ video {
   flex-direction: column;
   width: 399px;
   height: 534px;
-  gap: 26px;
+  gap: 22px;
 }
 
 .result__video-container {
@@ -149,7 +150,7 @@ video {
 }
 
 li:not(:last-child) {
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 }
 
 .content__video-card {
@@ -175,7 +176,6 @@ li:not(:last-child) {
 .content__card-link {
   text-decoration: none;
   color: white;
-  margin: 2px;
   display: block;
 }
 
@@ -191,6 +191,7 @@ li:not(:last-child) {
 
 fieldset {
   border: none;
+  padding-left: 1px;
 }
 
 .search-form__label {
@@ -207,21 +208,21 @@ fieldset {
 }
 
 .search-form__label:active {
-  text-decoration: none;
+  border-right: 1 px solid #fff;
+  border-left: 1 px solid #fff;
 }
 
 .search-form__textfield {
   min-width: 225px;
   min-height: 27px;
-  display: flex;
+  display: flexbox;
   flex-direction: row;
   align-items: center;
   padding: 0;
   gap: 10px;
   background-color: transparent;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
   appearance: none;
@@ -237,6 +238,8 @@ fieldset {
   display: flex;
   flex-direction: row;
   gap: 9px;
+  padding-left: 2px;
+  padding-bottom: 4px;
 }
 
 .search-form__label-text {
@@ -313,7 +316,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
 }
 
 .search-form__submit-button {
-  min-width: 194px;
+  min-width: 192px;
   min-height: 34px;
 }
 
@@ -322,11 +325,14 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
   height: 34px;
 }
 
-.search-form__textfield:active {
-  outline: 0.1px solid #fff;
+
+  .search-form__textfield:active {
+  border:1px solid #fff;
 }
 
-.search-form__label:has(.search-form__textfield:focus) {
+.search-form__label:has( 
+  .search-form__textfield:focus-visible
+  ) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
